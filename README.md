@@ -25,6 +25,7 @@ Bij het installeren doorloop je een paar menuutjes:
 - <ins>Password (administrator)</ins>: vul hier postgres in, of eventueel iets anders naar keuze. Belangrijk is wel dat je het onthoudt: hiermee log je als administrator in!
 - <ins>Port</ins>: 5432
 - <ins>Advanced Options</ins>: Default locale.
+
 De rest is *next > next > finish*.
 
 Als de installatie klaar is, krijg je meteen de vraag om *StackBuilder* te openen. Doe dit: met *StackBuilder* kun je namelijk additionele componenten (PostGIS!) installeren. Als dit niet gebeurt: open *StackBuilder* dan zelf via het *applicaties* menu.
