@@ -20,7 +20,7 @@ Je kan hier, afhankelijk van je operating system, een download kiezen:
 Er zijn verschillende versies, de meest recente staat bovenaan. Over het algemeen zijn de versies wel stabiel, maar pas op bij de “.0” versies: als er zo’n versie bovenaan staat (b.v. “18.0”), raden we je aan om een iets oudere te nemen.
 
 Bij het installeren doorloop je een paar menuutjes:
-- Select Components: vink hier alles aan
+- <ins>Select Components</ins>: vink hier alles aan
 Data directory: zorg ervoor dat deze naar een locatie verwijst waar je veel schijfruimte hebt
 Password (administrator): vul hier postgres in, of eventueel iets anders naar keuze. Belangrijk is wel dat je het onthoudt: hiermee log je als administrator in!
 Port: 5432
