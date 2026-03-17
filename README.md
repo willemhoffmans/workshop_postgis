@@ -15,11 +15,12 @@ Mocht je al een wat oudere versie van QGIS hebben, dan is dat geen enkel problee
 PostGIS zelf is geen programma, het is een extensie op het database management systeem PostgreSQL. Je moet dus eerst PostgreSQL installeren: dat kan via de [EnterpriseDB](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) website.
 
 Je kan hier, afhankelijk van je operating system, een download kiezen: 
-![download pagina](images/downloads postgresql.PNG) 
+![download pagina](images/downloads_postgresql.PNG) 
 
 Er zijn verschillende versies, de meest recente staat bovenaan. Over het algemeen zijn de versies wel stabiel, maar pas op bij de “.0” versies: als er zo’n versie bovenaan staat (b.v. “18.0”), raden we je aan om een iets oudere te nemen.
 
 Bij het installeren doorloop je een paar menuutjes:
+
     • <ins>Select Components</ins>: vink hier alles aan
     • <ins>Data directory</ins>: zorg ervoor dat deze naar een locatie verwijst waar je veel schijfruimte hebt
     • <ins>Password (administrator)</ins>: vul hier postgres in, of eventueel iets anders naar keuze. Belangrijk is wel dat je het onthoudt: hiermee log je als administrator in!
@@ -33,7 +34,7 @@ Als de installatie klaar is, krijg je meteen de vraag om *StackBuilder* te opene
 
 Kies in *Stackbuilder* eerst de geïnstalleerde PostgreSQL versie (is er waarschijnlijk maar één), vervolgens kun je bij *Spatial Extensions* **PostGIS** installeren. Vink die dus aan, pak de nieuwste versie. PostGIS wordt vervolgens gedownload en geïnstalleerd. 
 
-![stackbuilder exttensions](images/stackbuilder extensions.PNG)
+![stackbuilder extensions](images/stackbuilder_extensions.PNG)
 
 Tijdens de installatie krijg je de vraag "create spatial database?". Doe dit: er wordt dan meteen een ruimtelijke (PostGIS enabled) database aangemaakt, dat scheelt weer werk. De meeste andere vragen die langs komen wijzen zichzelf wel. Let wel op de locatie van de nieuw te installeren database: dit moet op een plek zijn waar voldoende schijfruimte vrij is. 
 
