@@ -21,10 +21,10 @@ Er zijn verschillende versies, de meest recente staat bovenaan. Over het algemee
 
 Bij het installeren doorloop je een paar menuutjes:
 - <ins>Select Components</ins>: vink hier alles aan
-Data directory: zorg ervoor dat deze naar een locatie verwijst waar je veel schijfruimte hebt
-Password (administrator): vul hier postgres in, of eventueel iets anders naar keuze. Belangrijk is wel dat je het onthoudt: hiermee log je als administrator in!
-Port: 5432
-Advanced Options: Default locale.
+- <ins>Data directory</ins>: zorg ervoor dat deze naar een locatie verwijst waar je veel schijfruimte hebt
+- <ins>Password (administrator)</ins>: vul hier postgres in, of eventueel iets anders naar keuze. Belangrijk is wel dat je het onthoudt: hiermee log je als administrator in!
+- <ins>Port</ins>: 5432
+- <ins>Advanced Options</ins>: Default locale.
 De rest is *next > next > finish*.
 
 Als de installatie klaar is, krijg je meteen de vraag om *StackBuilder* te openen. Doe dit: met *StackBuilder* kun je namelijk additionele componenten (PostGIS!) installeren. Als dit niet gebeurt: open *StackBuilder* dan zelf via het *applicaties* menu.
