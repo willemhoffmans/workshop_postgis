@@ -7,7 +7,7 @@ In dit deel maken we een verbinding met de database in QGIS. Het voordeel van QG
 Open QGIS en begin in een nieuw (leeg) project.<br>
 Kies voor *Layers -> Add Layer > PostgreSQL*, en vervolgens op **New**.
 
-(plaatje)
+![nieuwe connectie](images/database_connection_qgis.png)
 
 Zo'n verbinding is als volgt opgebouwd (let op: namen in het
 plaatje niet letterlijk overnemen):
