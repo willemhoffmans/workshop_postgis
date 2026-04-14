@@ -15,7 +15,7 @@ DB Manager kun je terugvinden in het QGIS menu onder *Database*. Vind je 'm daar
 
 In DB Manager kun je verbinding maken met je database connectie, en vervolgens direct de inhoud van de database bekijken en bevragen. Open in het linkerscherm bij *Providers* de *PostGIS* connecties: daar staat jouw gemaakte databaseconnectie bij. Klik deze aan en dan is de database verbonden in DB Manager, en kun je bij de inhoud. Afhankelijk van hoe een en ander bij de installatie is gegaan zie je een aantal dingen zoals hieronder:
 
-![inhoud](dbmanager_nieuwe_tabellen.PNG)
+![inhoud](images/dbmanager_nieuwe_tabellen.PNG)
 
 In ieder geval heb je een **public** schema, met daarin in ieder geval wat tabellen, zoals *spatial_ref_sys*, *geometry_columns* en *geography_columns*. De database bevat echter nog géén geodata! Die gaan we eerst importeren.
 
@@ -27,40 +27,23 @@ Je krijgt een dialoogscherm waarmee je een dataset in de database kan importeren
 
 Begin met de in QGIS ingeladen gemeenten:
 
-• <ins>Input</ins>: kies de kaartlaag met gemeenten
-• Schema: public
-• Table: Deze wordt automatisch overgenomen vanuit QGIS, maar verander dit! Kies een niet te lange naam, zonder spaties of '-' streepje (underscore '_' mag wél.
-• Primary key: vul hier een nieuw te maken veld in, bijvoorbeeld 'gid'.
-• Geometry column: de naam voor de geometriekolom, gebruik standaard 'geom'.
-• Sourde- en Target SRID: vul hier 28992 (Rijksdriehoekstelsel) in.
-• Convert field names to lowercase: zeker doen!
-• Create spatial index: altijd doen!
+* <ins>Input</ins>: kies de kaartlaag met gemeenten
+* <ins>Schema</ins>: public
+* <ins>Table</ins>: Deze wordt automatisch overgenomen vanuit QGIS, maar verander dit! Kies een niet te lange naam, zonder spaties of '-' streepje (underscore '_' mag wél.
+* <ins>Primary key</ins>: vul hier een nieuw te maken veld in, bijvoorbeeld 'gid'.
+* <ins>Geometry column</ins>: de naam voor de geometriekolom, gebruik standaard 'geom'.
+* <ins>Source-</ins> en <ins>Target SRID</ins>: vul hier 28992 (Rijksdriehoekstelsel) in.
+* <ins>Convert field names to lowercase</ins>: zeker doen!
+* <ins>Create spatial index</ins>: altijd doen!
 
 En nu maar eens kijken of de import lukt. Zo ja, kijk hoe het resultaat eruit ziet. Je het in het rechterscherm 3 tabbladen:
 
-* Info: de metadata bij de geïmporteerde tabel; zaken als kolommen (en type), hoeveel rijen, indexen e.d.
-* Table: een voorbeeldweergave van de attribuuttabel
-* Preview: een simpele weergave hoe de tabel er als kaartlaag uitziet.
+* <ins>Info</ins>: de metadata bij de geïmporteerde tabel; zaken als kolommen (en type), hoeveel rijen, indexen e.d.
+* <ins>Table</ins>: een voorbeeldweergave van de attribuuttabel
+* <ins>Preview</ins>: een simpele weergave hoe de tabel er als kaartlaag uitziet.
 
 Als alles er oké uitziet, importeer dan ook de windturbines, en bekijk hoe dit eruit ziet. 
 
 Laad vervolgens beide databasetabellen in het QGIS project: dat kan door ze naar het 'gewone' QGIS scherm te slepen, of door rechts klikken op de tabelnaam in het schema, en vervolgens *Add to Canvas* te kiezen.
 
 
-bekijk in de DB Manager de tabel en de voorvertoning, en
-controleer of dit er inderdaad goed uitziet. Bekijk vervolgens de metadata van de nieuwe tabel (tabblad
-info). Beantwoord de volgende vragen:
- Welke verschillende datatypen komen in de tabel voor?
- Wat voor type geometrie zit erin?
- Heeft de tabel een ruimtelijke index?
- Hoeveel RES regio’s bevat het bestand eigenlijk?
-Sleep het bestand vervolgens vanuit de DB Manager direct het QGIS scherm in. Je kan er nu gewoon mee
-GISsen zoals je gewend bent!
-DB Manager: handig!(?)
-Zoals is uitgelegd zijn er meerder ‘voordeuren’ om de PostgreSQL / PostGIS database te benaderen en te
-gebruiken. We hebben er nu twee gezien: pgAdmin en DB Manager. Het grote voordeel van DB Manager is
-dat je, gekoppeld aan QGIS, ook direct in beeld (de kaart) kan zien wat een bevraging op de database heeft
-opgeleverd. Dit in tegenstelling tot bijvoorbeeld pgAdmin.
-Gedurende het vervolg van de cursus gaan we heel veel met geodata doen, het ligt dan ook voor de hand
-om voor de opdrachten DB Manager te gebruiken. Maar… je bent hier in principe vrij in!
-En we zullen vast wel gaan zien dat DB Manager ook z’n beperkingen heeft.
