@@ -12,7 +12,7 @@ Kies voor *Layers -> Add Layer > PostgreSQL*, en vervolgens op **New**.
 Zo'n verbinding is als volgt opgebouwd (let op: namen in het
 plaatje niet letterlijk overnemen):
 
-* Name mag je zelf kiezen.
+* <u>Name</u> mag je zelf kiezen.
 * Host geeft aan op welke server de database te vinden
 is. In dit geval (lokaal) is dit localhost.
 * Port: 5432 is de standaardpoort waarover
