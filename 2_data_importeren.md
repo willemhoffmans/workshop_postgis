@@ -1,7 +1,7 @@
-#Data importeren in PostGIS 
+# Data importeren in PostGIS 
 In dit deel gaan we een paar datasets importeren in onze nog (vrijwel) lege database. Voor het importeren van datasets in een database zijn veel goede tools voorhanden, zoals ogr2ogr, waarmee je zo'n proces ook goed kan automatiseren. Een beperktere, maar wel veel eenvoudigere mogelijkheid is importeren via QGIS zelf, en wel de DB Manager plugin. Deze gaan we in deze workshop gebruiken. 
 
-##DB Manager
+## DB Manager
 DB Manager kun je terugvinden in het QGIS menu onder *Database*. Vind je 'm daar niet, kijk dan in het menu bij *Plugins > Manage and install Plugins* of de plugin aan staat, vermoedelijk is dat niet zo. Zet hem aan en open 'm vevolgens.
 
 In DB Manager gaan we twee datasets importeren in de database:
