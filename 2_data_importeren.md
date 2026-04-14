@@ -1,10 +1,19 @@
 # Data importeren in PostGIS 
 In dit deel gaan we een paar datasets importeren in onze nog (vrijwel) lege database. Voor het importeren van datasets in een database zijn veel goede tools voorhanden, zoals ogr2ogr, waarmee je zo'n proces ook goed kan automatiseren. Een beperktere, maar wel veel eenvoudigere mogelijkheid is importeren via QGIS zelf, en wel de DB Manager plugin. Deze gaan we in deze workshop gebruiken. 
 
-## DB Manager
+Via QGIS gaan we twee datasets importeren in de database:
+
+* [gemeentegrenzen (CBS)](https://service.pdok.nl/cbs/gebiedsindelingen/atom/v1_0/downloads/cbsgebiedsindelingen2026.gpkg)
+* [windturbines (RIVM)](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/23d0d402-a6d9-47c5-a6f3-d7f7fb35cb79)
+
+Download beide datasets. In geval van de windturbines, ga naar de link voor `alo:rivm_windturbines_ashoogte_actueel` en kies bij Download data voor een formaat om de dataset te downloaden, b.v. Shapefile.
+
+Laad eerst beide datasets in QGIS. Zoals je ziet bevat de geopackage van het CBS een hele trits aan datasets: kies hier voor gemeente_gegeneraliseerd.
+
+## DB Manager 
 DB Manager kun je terugvinden in het QGIS menu onder *Database*. Vind je 'm daar niet, kijk dan in het menu bij *Plugins > Manage and install Plugins* of de plugin aan staat, vermoedelijk is dat niet zo. Zet hem aan en open 'm vevolgens.
 
-In DB Manager gaan we twee datasets importeren in de database:
+DB Manager bevat een aantal handige 
 
 
 Tot nog toe hebben we in QGIS alleen maar gekeken naar hoe we bij de PostGIS database kunnen komen,
