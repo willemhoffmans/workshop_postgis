@@ -13,30 +13,41 @@ Laad eerst beide datasets in QGIS. Zoals je ziet bevat de geopackage van het CBS
 ## DB Manager 
 DB Manager kun je terugvinden in het QGIS menu onder *Database*. Vind je 'm daar niet, kijk dan in het menu bij *Plugins > Manage and install Plugins* of de plugin aan staat, vermoedelijk is dat niet zo. Zet hem aan en open 'm vervolgens.
 
-In DB Manager kun je verbinding maken met je database connectie, en vervolgens direct de inhoud van de database bekijken en bevragen.  
+In DB Manager kun je verbinding maken met je database connectie, en vervolgens direct de inhoud van de database bekijken en bevragen. Open in het linkerscherm bij *Providers* de *PostGIS* connecties: daar staat jouw gemaakte databaseconnectie bij. Klik deze aan en dan is de database verbonden in DB Manager, en kun je bij de inhoud. Afhankelijk van hoe een en ander bij de installatie is gegaan zie je een aantal dingen zoals hieronder:
+
+![inhoud](dbmanager_nieuwe_tabellen.PNG)
+
+In ieder geval heb je een **public** schema, met daarin in ieder geval wat tabellen, zoals *spatial_ref_sys*, *geometry_columns* en *geography_columns*. De database bevat echter nog géén geodata! Die gaan we eerst importeren.
+
+## Importeren van geodata
+Gebruik voor het importeren van datasets de knop de *Import Layer/File*.
+Je krijgt een dialoogscherm waarmee je een dataset in de database kan importeren. 
+
+![import_dataset](import_dataset.png)
+
+Begin met de in QGIS ingeladen gemeenten:
+
+• <ins>Input</ins>: kies de kaartlaag met gemeenten
+• Schema: public
+• Table: Deze wordt automatisch overgenomen vanuit QGIS, maar verander dit! Kies een niet te lange naam, zonder spaties of '-' streepje (underscore '_' mag wél.
+• Primary key: vul hier een nieuw te maken veld in, bijvoorbeeld 'gid'.
+• Geometry column: de naam voor de geometriekolom, gebruik standaard 'geom'.
+• Sourde- en Target SRID: vul hier 28992 (Rijksdriehoekstelsel) in.
+• Convert field names to lowercase: zeker doen!
+• Create spatial index: altijd doen!
+
+En nu maar eens kijken of de import lukt. Zo ja, kijk hoe het resultaat eruit ziet. Je het in het rechterscherm 3 tabbladen:
+
+* Info: de metadata bij de geïmporteerde tabel; zaken als kolommen (en type), hoeveel rijen, indexen e.d.
+* Table: een voorbeeldweergave van de attribuuttabel
+* Preview: een simpele weergave hoe de tabel er als kaartlaag uitziet.
+
+Als alles er oké uitziet, importeer dan ook de windturbines, en bekijk hoe dit eruit ziet. 
+
+Laad vervolgens beide databasetabellen in het QGIS project: dat kan door ze naar het 'gewone' QGIS scherm te slepen, of door rechts klikken op de tabelnaam in het schema, en vervolgens *Add to Canvas* te kiezen.
 
 
-Tot nog toe hebben we in QGIS alleen maar gekeken naar hoe we bij de PostGIS database kunnen komen,
-maar we hebben nog niets met data gedaan. We kunnen ook ‘gewone’ GIS data importeren, bijvoorbeeld
-een shapefile of een geopackage. In dit geval gaan we de dataset res_regios_2023.gpkg importeren: deze
-bevat de regiogrenzen van de Regionale Energie Strategie (RES). Via de QGIS DB Manager gaat dat vrij
-eenvoudig:
- Gebruik de Importeer knop (zie screenshot hieronder, rood omkaderd) of kies de menu optie Tabel
-– Laag / bestand importeren (deze optie wordt zichtbaar in de DB Manager na openen van een
-PostGIS connectie).
-Het volgende venster verschijnt:
-In het bijbehorende dialoogscherm invullen:
-• Invoerbestand: res_regios_2023
-• Schema waarin de tabel moet komen selecteren ( public voor nu)
-• Tabelnaam. Deze wordt automatisch ingevuld met de geopackagenaam, maar je mag uiteraard een
-andere invoeren. Denk er aan: alleen kleine letters, cijfers en onderstreepje!
-• Primaire sleutel: vul hier een nieuw te maken veld in. 'gid' is een goede optie, dan weet je vrijwel
-zeker dat je geen gedoe krijgt met bestaande kolommen die al zo heten. Dit veld wordt automatisch
-gevuld met unieke getallen.
-• Naam voor de geometriekolom, gebruik standaard 'geom'.
-• Bron- en doel SRID: vul hier 28992 (Rijksdriehoekstelsel) in.
-• Veldnamen naar kleine letters converteren: zeker doen!
-• Ruimtelijke index aanmaken: doen! Later meer daarover.En nu maar eens kijken of de import lukt. Zo ja, bekijk in de DB Manager de tabel en de voorvertoning, en
+bekijk in de DB Manager de tabel en de voorvertoning, en
 controleer of dit er inderdaad goed uitziet. Bekijk vervolgens de metadata van de nieuwe tabel (tabblad
 info). Beantwoord de volgende vragen:
  Welke verschillende datatypen komen in de tabel voor?
