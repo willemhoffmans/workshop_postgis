@@ -23,7 +23,7 @@ In ieder geval heb je een **public** schema, met daarin in ieder geval wat tabel
 Gebruik voor het importeren van datasets de knop de *Import Layer/File*.
 Je krijgt een dialoogscherm waarmee je een dataset in de database kan importeren. 
 
-![import_dataset](import_dataset.png)
+![import_dataset](images/import_dataset.png)
 
 Begin met de in QGIS ingeladen gemeenten:
 
@@ -45,5 +45,8 @@ En nu maar eens kijken of de import lukt. Zo ja, kijk hoe het resultaat eruit zi
 Als alles er oké uitziet, importeer dan ook de windturbines, en bekijk hoe dit eruit ziet. 
 
 Laad vervolgens beide databasetabellen in het QGIS project: dat kan door ze naar het 'gewone' QGIS scherm te slepen, of door rechts klikken op de tabelnaam in het schema, en vervolgens *Add to Canvas* te kiezen.
+
+Gelukt? Tijd om vragen te stellen aan de database!
+[Deel 3: de database bevragen](3_database_bevragen.md)
 
 
