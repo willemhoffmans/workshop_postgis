@@ -12,16 +12,16 @@ Kies voor *Layers -> Add Layer > PostgreSQL*, en vervolgens op **New**.
 Zo'n verbinding is als volgt opgebouwd (let op: namen in het
 plaatje niet letterlijk overnemen):
 
-* <u>Name</u> mag je zelf kiezen.
-* Host geeft aan op welke server de database te vinden
-is. In dit geval (lokaal) is dit localhost.
-* Port: 5432 is de standaardpoort waarover
+* <ins>Name</ins> mag je zelf kiezen.
+* <ins>Host</ins> geeft aan op welke server de database te vinden
+is. In dit geval (lokaal) is dit *localhost*.
+* <ins>Port</ins>: 5432 is de standaardpoort waarover
 gecommuniceerd wordt, tenzij je bij installatie van
 PostgreSQL een andere standaardpoort hebt
 gekozen.
-* Bij Database geef je de naam van de door jou zelf
+* Bij <ins>Database</ins> geef je de naam van de door jou zelf
 gemaakte database op.
-* Bij *Authentication > Basic* moet je User name en Password invullen. Heb je bij de installatie de default gekozen dan is dit Postgres / Postgres. Zo niet, dan weet je hopelijk nog wat het wél moet zijn.
+* Bij *Authentication > Basic* moet je <ins>User name</ins> en <ins>Password</ins> invullen. Heb je bij de installatie de default gekozen dan is dit *Postgres / Postgres*. Zo niet, dan weet je hopelijk nog wat het wél moet zijn.
 
 Met *Test Connection* kun je checken of er daadwerkelijk een
 connectie tot stand kan worden gebracht. Als dat niet het
