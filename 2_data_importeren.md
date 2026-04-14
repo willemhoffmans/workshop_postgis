@@ -1,7 +1,12 @@
-Data importeren via DB Manager
-Voor deze oefening heb je de plugin DB Manager in QGIS (menu Database) nodig. Als je die niet kan vinden,
-kijk dan bij Plugins / Manage and install plugins of die aan staat (DB manager is een core plugin, dus hij is er
-altijd). Zo niet, vink hem aan.
+#Data importeren in PostGIS 
+In dit deel gaan we een paar datasets importeren in onze nog (vrijwel) lege database. Voor het importeren van datasets in een database zijn veel goede tools voorhanden, zoals ogr2ogr, waarmee je zo'n proces ook goed kan automatiseren. Een beperktere, maar wel veel eenvoudigere mogelijkheid is importeren via QGIS zelf, en wel de DB Manager plugin. Deze gaan we in deze workshop gebruiken. 
+
+##DB Manager
+DB Manager kun je terugvinden in het QGIS menu onder *Database*. Vind je 'm daar niet, kijk dan in het menu bij *Plugins > Manage and install Plugins* of de plugin aan staat, vermoedelijk is dat niet zo. Zet hem aan en open 'm vevolgens.
+
+In DB Manager gaan we twee datasets importeren in de database:
+
+
 Tot nog toe hebben we in QGIS alleen maar gekeken naar hoe we bij de PostGIS database kunnen komen,
 maar we hebben nog niets met data gedaan. We kunnen ook ‘gewone’ GIS data importeren, bijvoorbeeld
 een shapefile of een geopackage. In dit geval gaan we de dataset res_regios_2023.gpkg importeren: deze
