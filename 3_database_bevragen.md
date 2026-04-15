@@ -42,6 +42,10 @@ WHERE code = 'G0123';
 ```
 In dit geval wordt de tabel **gemeenten** bevraagd (`FROM`). De tabel wordt gefilterd (`WHERE`) op de kolom *code*: alleen de rijen met een code 'G0123' moeten in het resultaat terugkomen. Let op de enkele quotes hierbij: dit is nodig bij het bevragen van tekstkolommen. Uiteindelijk worden van alle kolommen in de tabel alleen de *naam*, *code* en geometrie (*geom*) opgevraagd (`SELECT`), dus niet álle kolommen.
 
+## SQL Window
+DB Manager heeft naast een paar handige tools om de inhoud van de database te bekijken ook een tool om queries uit te voeren: het *SQL Window*.
+![SQL Window](images/sql_window.png)
+
 ## Opdrachten
 Spiek bij bovenstaand voorbeeld en in de syntax-tabel en beantwoord de volgende vragen d.m.v. queries. 
 1. Selecteer de hele gemeenten tabel (`SELECT *`)
