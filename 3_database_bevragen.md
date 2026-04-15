@@ -1,20 +1,9 @@
 # Deel 3: Basis SQL
 
 ## Inleiding
-Uitleggen wat we hierin gaan doen. 
-Vanwege de korte workshop gaan we wat kort door de bocht.
-Meer ervaring? Doe het dan volgens je eigen (vast betere!) regels. 
-En verzin zelf uitdagendere vragen.
+In dit deel gaan we daadwerkelijk de database bevragen. Zoals dat in databases gebruikelijk is doen we dat met *Standard Query Language* (SQL). SQL is een bijzonder krachtige en uitgebreide taal, voor deze workshop houden we het echter simpel en nogal kort door de bocht. Mocht je al wat meer ervaring met SQL hebben, laat je dan vooral niet beperken door onderstaande opdrachten en regeltjes maar ga rustig op avontuur uit!
 
-
-7. Koppeling: windturbines in jouw favoriete gemeente.
-8. dat in QGIS laden.
-9. totale kw in jouw gemeente
-10. totale kw per gemeente (GROUP BY)
-11. welke gemeente heeft de meeste kw?
-12. 10 met geom, maak er een view van.
-13. buffer windturbines
-14. extra vragen 
+In het [volgende deel](4_gevorderd_sql) gaan we wat verder en gebruiken we ook geometrische vergelijkingen (GIS!) in onze bevragingen.  
 
 ## SQL syntax voor selecties
 Eenvoudige SQL expresies in PostgreSQL (en PostGIS) gaan volgens een vast stramien. Hier een overzicht:
@@ -68,6 +57,7 @@ Spiek bij de voorbeeldquery hierboven en in de syntax-tabel en beantwoord de vol
 5. Selecteer uit de windturbines tabel alleen de ashoogte, diameter en het vermogen (kw)
 6. Bereken het totale vermogen in kilowatt voor de windturbines in heel Nederland. Let op: je ziet in de kolom *land* verschillende waarden, je moet alleen de winturbines bevragen die in Nederland liggen (dus een `WHERE` voorwaarde). Het totaal (alle waarden optellen) kan d.m.v. het statement `SUM(kolom)`. Als het goed is krijg je maar één rij en één kolom terug met alleen het getal dat deze waarde bevat.
 
-Extra:
+**Extra:**
+
 7. Kun je ook het totale vermogen per *land* berekenen? Dus het vermogen in Nederland, België enz. Hier moet je iets met een `GROUP BY` verzinnen. 
 
