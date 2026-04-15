@@ -3,7 +3,7 @@
 ## Inleiding
 In dit deel gaan we daadwerkelijk de database bevragen. Zoals dat in databases gebruikelijk is doen we dat met *Standard Query Language* (SQL). SQL is een bijzonder krachtige en uitgebreide taal, voor deze workshop houden we het echter simpel en nogal kort door de bocht. Mocht je al wat meer ervaring met SQL hebben, laat je dan vooral niet beperken door onderstaande opdrachten en regeltjes maar ga rustig op avontuur uit!
 
-In het [volgende deel](4_gevorderd_sql) gaan we wat verder en gebruiken we ook geometrische vergelijkingen (GIS!) in onze bevragingen.  
+In het [volgende deel](4_gevorderd_sql.md) gaan we wat verder en gebruiken we ook geometrische vergelijkingen (GIS!) in onze bevragingen.  
 
 ## SQL syntax voor selecties
 Eenvoudige SQL expresies in PostgreSQL (en PostGIS) gaan volgens een vast stramien. Hier een overzicht:
@@ -59,5 +59,7 @@ Spiek bij de voorbeeldquery hierboven en in de syntax-tabel en beantwoord de vol
 
 **Extra:**
 
-7. Kun je ook het totale vermogen per *land* berekenen? Dus het vermogen in Nederland, België enz. Hier moet je iets met een `GROUP BY` verzinnen. 
+7. Kun je ook het totale vermogen per *land* berekenen? Dus het vermogen in Nederland, België enz. Hier moet je iets met een `GROUP BY` verzinnen.
+
+Ga verder naar [Deel 4: gevorderd SQL](4_gevorderd_sql.md)
 
