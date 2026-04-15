@@ -6,13 +6,7 @@ Vanwege de korte workshop gaan we wat kort door de bocht.
 Meer ervaring? Doe het dan volgens je eigen (vast betere!) regels. 
 En verzin zelf uitdagendere vragen.
 
-## Opdrachten
-1. Selecteer de hele gemeenten tabel
-2. Selecteer jouw favoriete gemeente (WHERE)
-3. Laad dat in QGIS in met "add as layer"
-4. Alleen statnaam en statcode
-5. Windturbines: alleen een paar specifieke dingen
-6. Windturbines: totale kw in Nederland
+
 7. Koppeling: windturbines in jouw favoriete gemeente.
 8. dat in QGIS laden.
 9. totale kw in jouw gemeente
@@ -25,17 +19,35 @@ En verzin zelf uitdagendere vragen.
 ## SQL syntax voor selecties
 Eenvoudige SQL expresies in PostgreSQL (en PostGIS) gaan volgens een vast stramien. Hier een overzicht:
 
-| | | | |
+|volgorde|commando|verplicht?|betekenis|
 |---|---|---|---|
-|4|`SELECT`|verplicht|Kolom(men) die je wil selecteren. Met “*” selecteer je alles.|
+|4|`SELECT`|verplicht|Kolom(men) die je wil selecteren. Met `*` selecteer je alles.|
 |1|`FROM`|verplicht|Tabel(len) waaruit je wil selecteren|
 |2|`WHERE`|optioneel|Voorwaarde waaraan de selectie moet voldoen|
 |3|`GROUP BY`|optioneel|Samenvoegen (aggregeren) resultaten op 1 of meer kolommen|
 |5|`ORDER BY`|optioneel|Sorteren van de resultaten op 1 of meer kolommen|
 
 Belangrijk is de volgorde van de regels: die moet zijn zoals hier getoond. Echter: het is handig om bij het ontwerpen van een query de volgorde te hanteren zoals in de eerste kolom van dit overzicht. Dit is ook de volgorde die de database engine hanteert bij het uitvoeren.  
-1. Begin dus bij FROM. Uit welke tabel wil je selecteren?
-2. Daarna WHERE. Is er een voorwaarde?
-3. GROUP BY. Moeten resultaten worden samengevoegd?
-5. SELECT. Pas nu gaan we de kolommen selecteren! 
-6. ORDER BY. Sorteren van de resultaten. ASC (oplopend) of DESC (aflopend).
+1. Begin dus bij `FROM`. Uit welke tabel wil je selecteren?
+2. Daarna `WHERE`. Is er een voorwaarde?
+3. `GROUP BY`. Moeten resultaten worden samengevoegd?
+4. `SELECT`. Pas nu gaan we de kolommen selecteren! 
+5. `ORDER BY`. Sorteren van de resultaten. `ASC` (oplopend) of `DESC` (aflopend).
+
+**Een voorbeeld:**
+```
+SELECT naam, code, geom
+FROM gemeenten
+WHERE code = 'G0123';
+```
+In dit geval wordt de tabel **gemeenten** bevraagd (`FROM`). De tabel wordt gefilterd (`WHERE`) op de kolom *code*: alleen de rijen met een code 'G0123' moeten in het resultaat terugkomen. Let op de enkele quotes hierbij: dit is nodig bij het bevragen van tekstkolommen. Uiteindelijk worden van alle kolommen in de tabel alleen de *naam*, *code* en geometrie (*geom*) opgevraagd (`SELECT`), dus niet álle kolommen.
+
+## Opdrachten
+Spiek bij bovenstaand voorbeeld en in de syntax-tabel en beantwoord de volgende vragen d.m.v. queries. 
+1. Selecteer de hele gemeenten tabel (`SELECT *`)
+2. Selecteer jouw favoriete gemeente (WHERE)
+3. Laad dat in QGIS in met "add as layer"
+4. Alleen statnaam en statcode
+5. Windturbines: alleen een paar specifieke dingen
+6. Windturbines: totale kw in Nederland
+
