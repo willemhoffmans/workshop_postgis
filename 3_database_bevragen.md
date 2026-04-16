@@ -6,7 +6,7 @@ In dit deel gaan we daadwerkelijk de database bevragen. Zoals dat in databases g
 In het [volgende deel](4_gevorderd_sql.md) gaan we wat verder en gebruiken we ook geometrische vergelijkingen (GIS!) in onze bevragingen.  
 
 ## SQL syntax voor selecties
-Eenvoudige SQL expresies in PostgreSQL (en PostGIS) gaan volgens een vast stramien. Hier een overzicht:
+Eenvoudige SQL expressies in PostgreSQL (en PostGIS) gaan volgens een vast stramien. Hier een overzicht:
 
 |volgorde|commando|verplicht?|betekenis|
 |---|---|---|---|
@@ -27,9 +27,10 @@ Belangrijk is de volgorde van de regels: die moet zijn zoals hier getoond. Echte
 ```
 SELECT naam, code, geom
 FROM gemeenten
-WHERE code = 'G0123';
+WHERE code = 'G0123'
+ORDER BY naam;
 ```
-In dit geval wordt de tabel **gemeenten** bevraagd (`FROM`). De tabel wordt gefilterd (`WHERE`) op de kolom *code*: alleen de rijen met een code 'G0123' moeten in het resultaat terugkomen. Let op de enkele quotes hierbij: dit is nodig bij het bevragen van tekstkolommen. Uiteindelijk worden van alle kolommen in de tabel alleen de *naam*, *code* en geometrie (*geom*) opgevraagd (`SELECT`), dus niet álle kolommen.
+In dit geval wordt de tabel **gemeenten** bevraagd (`FROM`). De tabel wordt gefilterd (`WHERE`) op de kolom *code*: alleen de rijen met een code 'G0123' moeten in het resultaat terugkomen. Let op de enkele quotes hierbij: dit is nodig bij het bevragen van tekstkolommen. Uiteindelijk worden van alle kolommen in de tabel alleen de *naam*, *code* en geometrie (*geom*) opgevraagd (`SELECT`), dus niet álle kolommen. Het resultaat wordt alfabetisch gesorteerd op naam.
 
 ## SQL Window
 DB Manager heeft naast een paar handige tools om de inhoud van de database te bekijken ook een tool om queries uit te voeren: het *SQL Window*.
