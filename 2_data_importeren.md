@@ -6,18 +6,18 @@ Via QGIS gaan we twee datasets importeren in de database:
 * [gemeentegrenzen (CBS)](https://service.pdok.nl/cbs/gebiedsindelingen/atom/v1_0/downloads/cbsgebiedsindelingen2026.gpkg)
 * [windturbines (RIVM)](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/23d0d402-a6d9-47c5-a6f3-d7f7fb35cb79)
 
-Download beide datasets. In geval van de windturbines, ga naar de link voor `alo:rivm_windturbines_ashoogte_actueel` en kies bij Download data voor een formaat om de dataset te downloaden, b.v. Shapefile.
+Download beide datasets. In geval van de windturbines, ga naar de link voor `alo:rivm_windturbines_ashoogte_actueel` en kies bij *Download* data voor een formaat om de dataset te downloaden, b.v. ESRI Shapefile.
 
-Laad eerst beide datasets in QGIS. Zoals je ziet bevat de geopackage van het CBS een hele trits aan datasets: kies hier voor gemeente_gegeneraliseerd.
+Laad eerst beide datasets in QGIS. Zoals je ziet bevat de geopackage van het CBS een hele trits aan datasets: kies hier voor **gemeente_gegeneraliseerd**.
 
 ## DB Manager 
 DB Manager kun je terugvinden in het QGIS menu onder *Database*. Vind je 'm daar niet, kijk dan in het menu bij *Plugins > Manage and install Plugins* of de plugin aan staat, vermoedelijk is dat niet zo. Zet hem aan en open 'm vervolgens.
 
 In DB Manager kun je verbinding maken met je database connectie, en vervolgens direct de inhoud van de database bekijken en bevragen. Open in het linkerscherm bij *Providers* de *PostGIS* connecties: daar staat jouw gemaakte databaseconnectie bij. Klik deze aan en dan is de database verbonden in DB Manager, en kun je bij de inhoud. Afhankelijk van hoe een en ander bij de installatie is gegaan zie je een aantal dingen zoals hieronder:
 
-![inhoud](images/dbmanager_nieuwe_tabellen.PNG)
+![inhoud](images/dbmanager.png)
 
-In ieder geval heb je een **public** schema, met daarin in ieder geval wat tabellen, zoals *spatial_ref_sys*, *geometry_columns* en *geography_columns*. De database bevat echter nog géén geodata! Die gaan we eerst importeren.
+In ieder geval heb je een **public** schema, met daarin in ieder geval wat tabellen, zoals **spatial_ref_sys**, **geometry_columns** en **geography_columns**. De database bevat echter nog géén geodata! Die gaan we eerst importeren.
 
 ## Importeren van geodata
 Gebruik voor het importeren van datasets de knop de *Import Layer/File*.
@@ -29,8 +29,8 @@ Begin met de in QGIS ingeladen gemeenten:
 
 * <ins>Input</ins>: kies de kaartlaag met gemeenten
 * <ins>Schema</ins>: public
-* <ins>Table</ins>: Deze wordt automatisch overgenomen vanuit QGIS, maar verander dit! Kies een niet te lange naam, zonder spaties of '-' streepje (underscore '_' mag wél.
-* <ins>Primary key</ins>: vul hier een nieuw te maken veld in, bijvoorbeeld 'gid'.
+* <ins>Table</ins>: Deze wordt automatisch overgenomen vanuit QGIS, maar verander dit! Kies een niet te lange naam, **zonder spaties of '-' streepje** (underscore '_' mag wél.
+* <ins>Primary key</ins>: vul hier veld met unieke waarden in, bijvoorbeeld 'gid' (wordt dan automatisch aangemaakt).
 * <ins>Geometry column</ins>: de naam voor de geometriekolom, gebruik standaard 'geom'.
 * <ins>Source-</ins> en <ins>Target SRID</ins>: vul hier 28992 (Rijksdriehoekstelsel) in.
 * <ins>Convert field names to lowercase</ins>: zeker doen!
@@ -44,9 +44,8 @@ En nu maar eens kijken of de import lukt. Zo ja, kijk hoe het resultaat eruit zi
 
 Als alles er oké uitziet, importeer dan ook de windturbines, en bekijk hoe dit eruit ziet. 
 
-Laad vervolgens beide databasetabellen in het QGIS project: dat kan door ze naar het 'gewone' QGIS scherm te slepen, of door rechts klikken op de tabelnaam in het schema, en vervolgens *Add to Canvas* te kiezen.
+Laad vervolgens beide databasetabellen in het QGIS scherm: dat kan door ze er naartoe te slepen, of door rechts klikken op de tabelnaam in het schema, en vervolgens *Add to Canvas* te kiezen.
 
 Gelukt? Tijd om vragen te stellen aan de database!
 [Deel 3: de database bevragen](3_database_bevragen.md)
-
 
