@@ -21,7 +21,7 @@ AND gebieden.naam = 'Drunense Duinen';
 Wat zien we hier? 
 
 * We beginnen bij `FROM`. Hier zien we twee tabellen, gescheiden door een komma. Dit is een kort-door-de-bocht manier om in een bevraging twee tabellen aan elkaar te koppelen.
-* In de `WHERE` voorwaarde zien we hoe de bomen en de gebieden worden gekoppeld. Met `ST_Within` geef je aan dat de geometrie van de boom in de geometrie van het gebied moet liggen.
+* In de `WHERE` voorwaarde zien we *hoe* de bomen en de gebieden worden gekoppeld. Met `ST_Within` geef je aan dat de geometrie van de boom in de geometrie van het gebied moet liggen.
 * Er is echter nog een tweede `WHERE` voorwaarde waaraan we moeten voldoen, die staat in de `AND` regel. Namelijk dat de gebieden worden ingeperkt tot alleen het gebied met de naam 'Drunense Duinen'.
 * Ofwel: de andere gebieden worden niet geselecteerd. En dat betekent dan meteen ook dat de bomen die *niet* in het gebied 'Drunense Duinen' liggen niet meekomen.
 * In de `SELECT` regel laten we een paar kolommen uit de bomen tabel (én de geometrie) meekomen, en de naam uit de gebieden tabel.
