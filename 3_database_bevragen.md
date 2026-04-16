@@ -1,7 +1,7 @@
 # Deel 3: Basis SQL
 
 ## Inleiding
-In dit deel gaan we daadwerkelijk de database bevragen. Zoals dat in databases gebruikelijk is doen we dat met *Standard Query Language* (SQL). SQL is een bijzonder krachtige en uitgebreide taal, voor deze workshop houden we het echter simpel en nogal kort door de bocht. Mocht je al wat meer ervaring met SQL hebben, laat je dan vooral niet beperken door onderstaande opdrachten en regeltjes maar ga rustig op avontuur uit!
+In dit deel gaan we daadwerkelijk de database bevragen. Zoals dat in databases gebruikelijk is doen we dat met *Structured Query Language* (SQL). SQL is een bijzonder krachtige en uitgebreide taal, voor deze workshop houden we het echter simpel en nogal kort door de bocht. Mocht je al wat meer ervaring met SQL hebben, laat je dan vooral niet beperken door onderstaande opdrachten en regeltjes maar ga rustig op avontuur uit!
 
 In het [volgende deel](4_gevorderd_sql.md) gaan we wat verder en gebruiken we ook geometrische vergelijkingen (GIS!) in onze bevragingen.  
 
