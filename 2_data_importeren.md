@@ -29,7 +29,7 @@ Begin met de in QGIS ingeladen gemeenten:
 
 * <ins>Input</ins>: kies de kaartlaag met gemeenten
 * <ins>Schema</ins>: public
-* <ins>Table</ins>: Deze wordt automatisch overgenomen vanuit QGIS, maar verander dit! Kies een niet te lange naam, **zonder spaties of '-' streepje** (underscore '_' mag wél.
+* <ins>Table</ins>: Deze wordt automatisch overgenomen vanuit QGIS, maar verander dit! Kies een niet te lange naam, **zonder hoofdletters, spaties of '-' streepje** (underscore '_' mag wél.
 * <ins>Primary key</ins>: vul hier veld met unieke waarden in, bijvoorbeeld 'gid' (wordt dan automatisch aangemaakt).
 * <ins>Geometry column</ins>: de naam voor de geometriekolom, gebruik standaard 'geom'.
 * <ins>Source-</ins> en <ins>Target SRID</ins>: vul hier 28992 (Rijksdriehoekstelsel) in.
