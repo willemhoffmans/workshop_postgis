@@ -39,3 +39,5 @@ Kies in *Stackbuilder* eerst de geïnstalleerde PostgreSQL versie (is er waarsch
 Tijdens de installatie krijg je de vraag "create spatial database?". Doe dit: er wordt dan meteen een ruimtelijke (PostGIS enabled) database aangemaakt, dat scheelt weer werk. De meeste andere vragen die langs komen wijzen zichzelf wel. Let wel op de locatie van de nieuw te installeren database: dit moet op een plek zijn waar voldoende schijfruimte vrij is. 
 
 PostgreSQL is nu geïnstalleerd, inclusief de PostGIS extensie. Als het goed is heb je ook pgAdmin 4: dat is de beheer interface die (bij Windows!) standaard wordt meegeïnstalleerd. Je kán 'm gebruiken, maar voor de oefeningen in deze workshop gaan we de database direct via QGIS benaderen.
+
+Verder naar [Deel 1: verbinding maken](1_verbinding_maken.md)
