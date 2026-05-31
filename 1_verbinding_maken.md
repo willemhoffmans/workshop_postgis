@@ -39,4 +39,4 @@ dat de inhoud van de database sneller wordt gescand bij het inlezen.
 Als alles goed is ingevuld en getest, klik *OK*, en vervolgens op *Connect*.
 De connectie is nu tot stand gebracht. Je kan nu als het goed is de inhoud van de database zien. Hier doen we echter niks mee: QGIS heeft handigere tools om met een PostGIS database te werken, zoals **DB Manager**. Die gaan we nu gebruiken.
 
-## DB Manager
+[Deel 2: Data importeren](2_data_importeren.md).
